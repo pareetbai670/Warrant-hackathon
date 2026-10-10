@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warrant — permission slips for AI agents</title>
+<meta name="description" content="Warrant is a trust layer for autonomous AI agents. Every action needs a signed, scoped, expiring warrant, and every decision lands in a tamper-evident ledger.">
+<meta property="og:title" content="Warrant — permission slips for AI agents">
+<meta property="og:description" content="Agents act. Warrants decide. A policy gate, human countersign and hash-chained audit ledger for multi-agent systems.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f1ebdd">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23b92b1a'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23f1ebdd' stroke-width='1.5'/%3E%3Cpath d='M10.5 16.5l3.8 3.8 7.2-8' fill='none' stroke='%23f1ebdd' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" aria-label="Warrant home">
+      <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#b92b1a"/><circle cx="16" cy="16" r="10" fill="none" stroke="#f1ebdd" stroke-width="1.5"/><path d="M10.5 16.5l3.8 3.8 7.2-8" fill="none" stroke="#f1ebdd" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Warrant</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#problem">Problem</a>
+      <a href="#demo">Live demo</a>
+      <a href="#how">How it works</a>
+      <a href="#next">Roadmap</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker">Trust layer for agentic AI</p>
+      <h1>Agents act.<br><em>Warrants</em> decide.</h1>
+      <p class="lede">Teams are handing real tools to teams of AI agents. Warrant sits between the agents and those tools. Every action needs a signed, scoped, expiring permission slip, and every decision is written to a ledger nobody can quietly edit.</p>
+      <div class="cta">
+        <a class="btn btn--solid" href="#demo">Run the live demo</a>
+        <a class="btn btn--line" href="#how">How it works</a>
+      </div>
+      <p class="fine">Built for the moment an agent reads a web page that tells it to do something it was never asked to do.</p>
+    </div>
+
+    <figure class="specimen" aria-label="Example warrant">
+      <div class="spec-card">
+        <div class="spec-top">
+          <span class="spec-no">WARRANT № w_7c41a9e2</span>
+          <span class="spec-seal" aria-hidden="true">SIGNED</span>
+        </div>
+        <dl>
+          <div><dt>Issued to</dt><dd>Executor agent</dd></div>
+          <div><dt>May call</dt><dd class="mono">refund.issue</dd></div>
+          <div><dt>Up to</dt><dd>$100.00</dd></div>
+          <div><dt>For</dt><dd>Ticket #4471 only</dd></div>
+          <div><dt>Valid</dt><dd>60 seconds, single use</dd></div>
+        </dl>
+        <div class="spec-sig mono">sig 9ac1f03e5d27 · prev 77de…10b2</div>
+      </div>
+      <figcaption>Specimen. Nothing runs without one of these.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem" class="problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">The gap</p>
+      <h2>Agents got tools before they got a chain of custody.</h2>
+    </div>
+    <div class="stats">
+      <article class="stat reveal">
+        <p class="num">72%</p>
+        <p>of enterprise AI projects now involve several agents working together, up from 23% in 2024.</p>
+        <a href="https://guptadeepak.com/ai-agent-observability-evaluation-governance-the-2026-market-reality-check/" target="_blank" rel="noopener">Source: 2026 market check</a>
+      </article>
+      <article class="stat reveal">
+        <p class="num">69%</p>
+        <p>of AI-powered decisions still need a person to verify them, because nobody can see why an agent acted.</p>
+        <a href="https://guptadeepak.com/ai-agent-observability-evaluation-governance-the-2026-market-reality-check/" target="_blank" rel="noopener">Source: 2026 market check</a>
+      </article>
+      <article class="stat stat--ink reveal">
+        <p class="num">1 line</p>
+        <p>of hidden text on a web page can redirect an agent. Content filters read the words. Warrant asks a different question: <em>was this agent ever allowed to do that?</em></p>
+        <a href="https://aiagentstore.ai/ai-agent-news/topic/human-agent-trust/2026-09-08" target="_blank" rel="noopener">Industry is moving to signed, auditable agent actions</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo" class="demo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Live demo · runs entirely in your browser</p>
+      <h2>Watch a prompt injection hit the gate.</h2>
+      <p class="sub">Three agents work a task. One of them reads a poisoned page. Flip the policy switches mid-run and see what changes.</p>
+    </div>
+
+    <div class="scn-tabs" role="tablist" aria-label="Scenario">
+      <button class="scn" role="tab" data-scn="support" aria-selected="true" type="button">Support desk</button>
+      <button class="scn" role="tab" data-scn="devops" aria-selected="false" type="button">DevOps release</button>
+      <button class="scn" role="tab" data-scn="buying" aria-selected="false" type="button">Procurement</button>
+    </div>
+    <p class="task"><strong>Task given to the agents:</strong> <span id="taskText"></span></p>
+
+    <div class="board">
+
+      <aside class="panel side">
+        <h3>Agents</h3>
+        <ul id="agentList" class="agents"></ul>
+
+        <h3>Policy</h3>
+        <div class="policy">
+          <label class="range">
+            <span class="range-top"><span>Auto-approve spend up to</span><output id="limitVal">$100</output></span>
+            <input id="limit" type="range" min="0" max="5000" step="50" value="100">
+          </label>
+          <label class="switch"><input id="pTrust" type="checkbox" checked><span class="track" aria-hidden="true"></span><span class="sw-text"><b>Trust boundary</b><small>Refuse actions that began as outside content</small></span></label>
+          <label class="switch"><input id="pEgress" type="checkbox" checked><span class="track" aria-hidden="true"></span><span class="sw-text"><b>Egress allowlist</b><small>Refuse destinations not on the list</small></span></label>
+          <label class="switch"><input id="pHuman" type="checkbox" checked><span class="track" aria-hidden="true"></span><span class="sw-text"><b>Human countersign</b><small>Irreversible actions wait for a person</small></span></label>
+        </div>
+        <p class="hint">Changes apply to the next action.</p>
+      </aside>
+
+      <section class="panel mid" aria-label="Action stream">
+        <div class="mid-head">
+          <div class="counters" aria-label="Totals">
+            <div><span id="sAllow">0</span><small>Allowed</small></div>
+            <div><span id="sHold">0</span><small>Escalated</small></div>
+            <div><span id="sRefuse">0</span><small>Refused</small></div>
+            <div id="sBreachBox"><span id="sBreach">0</span><small>Breaches</small></div>
+          </div>
+          <div class="ctrls">
+            <button id="runBtn" class="btn btn--solid" type="button">Run agents</button>
+            <button id="stepBtn" class="btn btn--line" type="button">Step</button>
+            <button id="resetBtn" class="btn btn--ghost" type="button">Reset</button>
+          </div>
+        </div>
+        <div id="stream" class="stream"></div>
+      </section>
+
+      <aside class="panel ledger-panel" aria-label="Audit ledger">
+        <div class="led-head">
+          <h3>Audit ledger</h3>
+          <p>Each entry commits to the one before it with SHA-256.</p>
+        </div>
+        <div class="led-btns">
+          <button id="verifyBtn" class="btn btn--line btn--sm" type="button">Verify chain</button>
+          <button id="tamperBtn" class="btn btn--danger btn--sm" type="button">Play attacker</button>
+          <button id="exportBtn" class="btn btn--ghost btn--sm" type="button">Export JSON</button>
+        </div>
+        <div id="verifyMsg" class="verify" role="status" aria-live="polite"></div>
+        <ol id="ledger" class="ledger"></ol>
+      </aside>
+
+    </div>
+
+    <p class="honest reveal"><b>Honest note.</b> The agents' moves are scripted so the demo repeats every time. The policy gate, warrant signing, human countersign, hash chain and tamper check are real code running in this page.</p>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">How it works</p>
+      <h2>Four steps between an idea and a tool call.</h2>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span class="n">1</span><h3>Propose</h3><p>An agent states the tool it wants, the arguments, and where the instruction came from: the user's task or something it read along the way.</p></li>
+      <li class="reveal"><span class="n">2</span><h3>Check</h3><p>The gate tests provenance, destination, spend limit and reversibility. Outside text can never grant itself authority.</p></li>
+      <li class="reveal"><span class="n">3</span><h3>Warrant</h3><p>Safe actions get a signed, single-use slip with a scope and an expiry. Risky ones wait for a human to countersign.</p></li>
+      <li class="reveal"><span class="n">4</span><h3>Record</h3><p>Every outcome, including refusals, is chained into the ledger. Rewrite one line and verification points at it.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="next" class="next">
+  <div class="wrap next-grid">
+    <div class="reveal">
+      <p class="kicker">After the hackathon</p>
+      <h2>From demo to drop-in gate.</h2>
+    </div>
+    <ul class="road reveal">
+      <li><b>MCP proxy.</b> Put Warrant in front of any MCP server so existing agent stacks adopt it without code changes.</li>
+      <li><b>Real signing.</b> Ed25519 keys held in a hardware-backed signer, with per-agent identities.</li>
+      <li><b>Policy as code.</b> Write rules in Cedar or Rego, test them against recorded ledgers before shipping.</li>
+      <li><b>Public anchoring.</b> Publish ledger roots to a transparency log so even the operator cannot rewrite history.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="brand brand--sm">Warrant</span>
+    <span>Hackathon MVP · static site, no backend, no keys.</span>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
